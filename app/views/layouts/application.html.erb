@@ -3,9 +3,14 @@
 	<head>
 		<title>Ruby on Rails Tutorial Sample App | <%= @title %></title>
 		<%= csrf_meta_tag %>
+		<%= stylesheet_link_tag 'blueprint/screen', :media=>'screen'%>
+		<%= stylesheet_link_tag 'blueprint/print', :media=> 'print'%>
 	</head>
 	<body>
 		<%=yield%>
+		<footer>
+			
+		</footer>
 	</body>
 </html>
 		
