@@ -1,6 +1,6 @@
 SampleApp::Application.routes.draw do
   
-  get "users/new"
+  resources :users #way to get all the REST URLs, to replace line get "users/new"
 
   root :to => 'pages#home'
   
