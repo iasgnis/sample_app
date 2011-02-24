@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
       self.encrypted_password = encrypt(password) #=  encrypt(self.password)
     end
     
-    def encrypt(string) #Screencast#7 paused @34:54, trying to sleep at 23:51
+    def encrypt(string) #Screencast#7 paused @34:54, trying to sleep at 02.22-23:51
       string
     end
     

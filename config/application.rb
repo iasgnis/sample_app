@@ -38,6 +38,13 @@ module SampleApp
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    # Configure generators values.
+    # config.generators do |g|
+    #   g.test_framework  :rspec, :fixture => true
+    #   g.fixture_replacement :factory_girl, :dir=>"spec/requests"
+    # end
+
     
     ### Part of a Spork hack. See http://bit.ly/arY19y
     if Rails.env.test?
