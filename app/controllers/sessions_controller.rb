@@ -17,8 +17,9 @@ class SessionsController < ApplicationController
     end
   end
   
-  def detroy
-    
+  def destroy
+    sign_out
+    redirect_to root_path
   end
 
  # Begin: This code should be in sessions_helper, but it wasn't running, so I'll put it here

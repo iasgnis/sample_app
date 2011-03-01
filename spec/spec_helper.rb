@@ -1,6 +1,6 @@
 require 'rubygems'
-require 'factory_girl'
-Factory.find_definitions
+# require 'factory_girl'
+# Factory.find_definitions
 require 'spork'
 
 Spork.prefork do    
@@ -39,6 +39,16 @@ Spork.prefork do
     # Emulate initializer set_clear_dependencies_hook in
     # railties/lib/rails/application/bootstrap.rb
     ActiveSupport::Dependencies.clear
+    
+    def test_sign_in(user)
+      # controller.current_user = user
+      controller.sign_in(user)
+    end
+
+    Factory.factories.clear 
+    Factory.find_definitions 
+    # load 'requests/factories.rb'  
+
   end  
 end
 
